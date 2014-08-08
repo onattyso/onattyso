@@ -1,0 +1,163 @@
+body {
+	padding: 0;
+	margin: 0;
+	color: #615F5F;
+	background-color: #FFFFFF;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;	
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+
+#background {
+	z-index: -10;
+}
+
+#content {
+	width: 50%;
+	height: 50%;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	text-align: center;
+	z-index: 10;
+}
+
+#content h1 {
+	font-size: 50px;
+	color: #424242;
+	margin: auto;
+	text-align: center;
+	letter-spacing: 7px;
+}
+
+#content h2 {
+	font-size: 18px;
+	color: #474747;
+	text-align: center;
+	letter-spacing: 2px;
+	font-weight: 200;
+}
+
+#socialmedia {
+	position: relative;
+	text-align: center;
+	margin: auto;
+	top: 0px; left: 0; bottom: 0; right: 0;
+}
+
+#socialmedia ul {
+	display: inline-block; 
+	list-style: none;
+}
+
+#socialmedia li {
+	float: left;
+	padding: 5px;
+}
+
+#socialmedia a {
+	opacity: 1;
+}
+
+#socialmedia a:hover {
+	opacity: 0.5;
+}
+
+#links {
+	position: relative;
+	text-align: center;
+	margin: auto;
+	top: 0px; left: 0; bottom: 0; right: 0;
+
+}
+
+#links ul {
+	display: inline-block;
+	list-style: none;
+	float: center;
+}
+
+#links li {
+	padding: 5px;
+	display: inline;
+}
+
+#links a {
+	text-decoration: none;
+	color: #040404;
+	opacity: 1;
+}
+
+#links a:hover {
+	opacity: .5;
+}
+
+#randomfact {
+	position: absolute;
+	text-align: center;
+	margin: auto;
+	top: 400px; left: 0; bottom: 0; right: 0;
+	font-size: 14px;
+}
+
+#draw-shapes {
+	z-index: -10;
+}
+
+button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #d9d9d9;
+	opacity: .7;
+	text-align: center;
+	float: left;
+	z-index: 30;
+}
+
+.icon {
+
+}
+
+.icon: hover{
+ 	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+#about {
+	display: none;
+}
+
+.unfold {
+ 
+  .mfp-content {
+    perspective: 2000px; 
+  }
+  
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotateY(-60deg);
+  }
+  
+  
+  &.mfp-bg {
+    opacity: 0;
+	  transition: all 0.5s;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
