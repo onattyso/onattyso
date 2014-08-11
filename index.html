@@ -39,15 +39,12 @@ Pfft. Creative Technologists.
 	<link rel="icon" href="favicon.png" type="image/png"/>
     <link rel="stylesheet" href="css/normalize.css">
 	<link  href="css/main.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css"> 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="js/two.js"></script>
 </head>
 <body>
-	<div id="background">
-		<script src ="js/main.js"></script>
-	</div>
-	<button class="icon">?</button>
 	<div id="content">
 		<h1>Natalie Sun</h1>
 		<h2>Creative Technologist. Nerd.</h2>
@@ -65,19 +62,27 @@ Pfft. Creative Technologists.
  -->			<ul>
 		</div>
 		<div id="randomfact">
+			Click!
 		</div>
 	</div>
 	<div id="draw-shapes">
 	</div>
-	<div id="about" data-effect="unfold">
-		<p>“Tell me and I'll forget; show me and I may remember; involve me and I'll understand.”</p>
-	</br>
-		<p>I like to tinker with technology and design great experiences that allow people to share their stories.</p>
-	</br>
-		<p>Want to grab coffee and geek out about creative code and interactive art?</p>
-		<p>You can reach me here: <a href="mailto:onattyso@gmail.com">onattyso [at] gmail [dot] com<</a>/p>
+	<div id ="inline-popups">
+<!-- 		<button class ="aboutbtn">?</btn> -->
+		<a href="#about" class="aboutbtn" data-effect="mfp-3d-unfold">?</a>
 	</div>
-    <script src="js/plugins.js"></script>
+	<div id="about" class="popup mfp-with-anim mfp-hide">
+			<p>“Tell me and I'll forget; show me and I may remember; involve me and I'll understand.”</p>
+		</br>
+			<p>I like to tinker with technology and design great experiences that allow people to share their stories.</p>
+		</br>
+			<p>Want to grab coffee and geek out about creative code and interactive art?</p>
+			<p>You can reach me here: <a href="mailto:onattyso@gmail.com">onattyso [at] gmail [dot] com</a></p>
+	</div>
+
+	<script src ="js/main.js"></script>
+    <script src ="js/plugins.js"></script>
+    <script src="js/magnific-popup/jquery.magnific-popup.js"></script> 
 
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

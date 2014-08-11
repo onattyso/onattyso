@@ -19,7 +19,6 @@ var textArray =[
 	"#hashtag",
 	"ᕕ( ᐛ )ᕗ",
 	"Hey I just met you, but this is crazy...so here's my handle, so tweet me maybe",
-	"Refresh",
 	"The greatest trick the devil ever pulled was convincing the world he didn't exist.",
 	"I just nerded all over myself.",
 	"Raised in WA, lives in LA, in love with SF",
@@ -57,7 +56,6 @@ $(function() {
 	//-------On mousedown, run the 'make a circle' loop
 
 	var down = false;
-	$
 
 	var $document = $(document)
 		.mousedown(function(event) {
@@ -81,7 +79,20 @@ $(function() {
 		.mouseup(function(event) {
 			down = false;
 			$("#draw-shapes").stop();
-		});	
+		});
+			// Inline popups
+		$('#inline-popups').magnificPopup({
+		  type: 'inline',
+		  delegate: 'a',
+		  removalDelay: 500, //delay removal by X to allow out-animation
+		  callbacks: {
+		    beforeOpen: function() {
+		       this.st.mainClass = this.st.el.attr('data-effect');
+		    }
+		  },
+		  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+		});
+		
 
 
 	//-------
@@ -116,5 +127,6 @@ $(function() {
               + .5 + ')';
 			  // + Math.random()*.5 + ')';
 	}
+
 
 });

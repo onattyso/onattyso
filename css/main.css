@@ -10,10 +10,6 @@ body {
 	z-index: 3;
 }
 
-#background {
-	z-index: -10;
-}
-
 #content {
 	width: 50%;
 	height: 50%;
@@ -86,7 +82,7 @@ body {
 
 #links a {
 	text-decoration: none;
-	color: #040404;
+	color: #090909;
 	opacity: 1;
 }
 
@@ -106,38 +102,56 @@ body {
 	z-index: -10;
 }
 
-button {
+.aboutbtn {
 	width: 50px;
 	height: 50px;
+	border: 0px;
 	border-radius: 50%;
 	background-color: #d9d9d9;
 	opacity: .7;
 	text-align: center;
 	float: left;
 	z-index: 30;
+	font-size: 25px;
+	font-weight: 900;
+	color: #090909;
+	margin: 10px;
+	position: relative;
+	text-decoration: none;
 }
 
-.icon {
-
-}
-
-.icon: hover{
+.aboutbtn:hover {
+	opacity: .7;
  	-webkit-transform: rotate(360deg);
 	-moz-transform: rotate(360deg);
 	transform: rotate(360deg);
 }
 
 #about {
-	display: none;
+	font-size: 15px;
+	position: relative;
+	background: #d9d9d9;
+	opacity: .7;
+	width: auto;
+	max-width: 500px;
 }
 
+.popup {
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  width:auto;
+  max-width: 400px;
+  margin: 0 auto; 
+}
+
+/*
 .unfold {
  
   .mfp-content {
     perspective: 2000px; 
   }
   
-  /* start state */
   .mfp-with-anim {
     opacity: 0;
     transition: all 0.3s ease-in-out;
@@ -151,7 +165,7 @@ button {
 	  transition: all 0.5s;
   }
   
-  /* animate in */
+  
   &.mfp-ready {
     .mfp-with-anim {
       opacity: 1;
@@ -161,3 +175,4 @@ button {
       opacity: 0.8;
     }
   }
+*/
