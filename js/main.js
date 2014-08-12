@@ -63,7 +63,7 @@ $(function() {
 			mouseY = event.pageY;
 			r = 10;
 			down = true;
-	  		console.log( event.pageX + ", " + event.pageY );
+	  		// console.log( event.pageX + ", " + event.pageY );
 
 	  		var Circle = two.makeCircle(mouseX, mouseY, r);
 	  		Circle.noStroke().fill=randomColor();
@@ -74,7 +74,6 @@ $(function() {
 	  			}
 	  		).play();
 	  		$("#randomfact").html("").append(randomNumber());
-	  		console.log("Do we see this?");
 	  		})
 		.mouseup(function(event) {
 			down = false;
@@ -84,12 +83,14 @@ $(function() {
 		$('#inline-popups').magnificPopup({
 		  type: 'inline',
 		  delegate: 'a',
+		  closeOnContentClick: true,
 		  removalDelay: 500, //delay removal by X to allow out-animation
 		  callbacks: {
 		    beforeOpen: function() {
 		       this.st.mainClass = this.st.el.attr('data-effect');
 		    }
 		  },
+		  mainClass: 'mfp-3d-unfold',
 		  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 		});
 		

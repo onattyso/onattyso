@@ -96,10 +96,15 @@ body {
 	margin: auto;
 	top: 400px; left: 0; bottom: 0; right: 0;
 	font-size: 14px;
+	color: #060606;
 }
 
 #draw-shapes {
 	z-index: -10;
+}
+
+.inline-popups {
+	z-index: 10;
 }
 
 .aboutbtn {
@@ -108,8 +113,10 @@ body {
 	border: 0px;
 	border-radius: 50%;
 	background-color: #d9d9d9;
-	opacity: .7;
+	opacity: .8;
 	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
 	float: left;
 	z-index: 30;
 	font-size: 25px;
@@ -121,19 +128,20 @@ body {
 }
 
 .aboutbtn:hover {
-	opacity: .7;
- 	-webkit-transform: rotate(360deg);
-	-moz-transform: rotate(360deg);
-	transform: rotate(360deg);
+	opacity: .6;
+	-webkit-transform: scale(.8);
+	-moz-transform: scale(.8);
+	-ms-transform: scale(.8);
+	transform: scale(.8);
 }
 
 #about {
 	font-size: 15px;
 	position: relative;
 	background: #d9d9d9;
-	opacity: .7;
 	width: auto;
 	max-width: 500px;
+	opacity: .8;
 }
 
 .popup {
@@ -145,34 +153,57 @@ body {
   margin: 0 auto; 
 }
 
-/*
-.unfold {
- 
+/* 3D Unfold effect from Codepen.io */
+.mfp-3d-unfold {
+  
   .mfp-content {
     perspective: 2000px; 
+    -webkit-perspective: 2000px; 
   }
   
+  /* start state */
   .mfp-with-anim {
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    -moz-transition-property: all 0.3s ease-in-out; /* Firefox 4 */
+    -webkit-transition-property: all 0.3s ease-in-out; /* Safari and Chrome */
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transform: rotateY(-60deg);
+    -webkit-transform: rotateY(-60deg);
   }
-  
   
   &.mfp-bg {
     opacity: 0;
-	  transition: all 0.5s;
+    transition: all 0.5s;
+    -moz-transition-property: all 0.5s ease-in-out; /* Firefox 4 */
+    -webkit-transition-property: all 0.5s ease-in-out; /* Safari and Chrome */
   }
   
-  
+  /* animate in */
   &.mfp-ready {
     .mfp-with-anim {
       opacity: 1;
       transform: rotateY(0deg);
+      -webkit-transform: rotateY(0deg);
     }
     &.mfp-bg {
       opacity: 0.8;
     }
   }
-*/
+  
+  /* animate out */
+  &.mfp-removing {
+    
+    .mfp-with-anim {
+      transform: rotateY(60deg);
+      -webkit-transform: rotateY(60deg);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+    
+  }
+  
+}

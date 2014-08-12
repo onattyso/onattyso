@@ -379,13 +379,19 @@ img.mfp-img {
   .mfp-with-anim {
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    -moz-transition-property: all 0.3s ease-in-out; /* Firefox 4 */
+    -webkit-transition-property: all 0.3s ease-in-out; /* Safari and Chrome */
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transform: rotateY(-60deg);
     transform: rotateY(-60deg);
   }
   
   &.mfp-bg {
     opacity: 0;
     transition: all 0.5s;
+    -moz-transition-property: all 0.5s ease-in-out; /* Firefox 4 */
+    -webkit-transition-property: all 0.5s ease-in-out; /* Safari and Chrome */
   }
   
   /* animate in */
@@ -393,6 +399,7 @@ img.mfp-img {
     .mfp-with-anim {
       opacity: 1;
       transform: rotateY(0deg);
+      -webkit-transform: rotateY(0deg);
     }
     &.mfp-bg {
       opacity: 0.8;
@@ -404,6 +411,7 @@ img.mfp-img {
     
     .mfp-with-anim {
       transform: rotateY(60deg);
+      -webkit-transform: rotateY(60deg);
       opacity: 0;
     }
     &.mfp-bg {
